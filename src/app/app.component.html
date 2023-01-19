@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <button mat-icon-button class="burger-btn" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let categoria of categoriesList">
+        <span>{{categoria}}</span>
+      </button>
+  </mat-menu>
+  <span class="spacer-little"></span>
+  <span>Fake Store</span>
+</mat-toolbar>
+
+<mat-card *ngFor="let product of productsList" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <mat-card-subtitle>${{product.price}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-xl-image src="{{product.image}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      <strong>
+      rating: {{product.rating.rate}}
+      <span class="spacer-little"></span>
+      votos: {{product.rating.count}}
+    </strong>
+    </p>
+  </mat-card-content>
+</mat-card>

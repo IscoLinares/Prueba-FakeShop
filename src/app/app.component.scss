@@ -1,0 +1,22 @@
+.spacer-little {
+    width: 2vw;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .burger-btn {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .example-card {
+    max-width: 400px;
+    margin: 10px;
+    background-color: white;
+  }
+
+  .mat-card-xl-image {
+    justify-self: center;
+  }
