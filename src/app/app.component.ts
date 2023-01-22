@@ -26,4 +26,32 @@ export class AppComponent implements OnInit{
       .subscribe((resprod: any) => this.productsList = resprod);
     
     }
+
+    onSelect(value:string) {
+      console.log(value)
+      if (value === 'electronics') {
+        this.ProductosService.getElectronicos()
+      .subscribe((resprod: any) => this.productsList = resprod);
+      }
+      if (value === 'jewelery') {
+        this.ProductosService.getJoyas()
+      .subscribe((resprod: any) => this.productsList = resprod);
+      }
+      if (value === "men's clothing") {
+        this.ProductosService.getRopaHom()
+      .subscribe((resprod: any) => this.productsList = resprod);
+      }
+      if (value === "women's clothing") {
+        this.ProductosService.getRopaMuj()
+      .subscribe((resprod: any) => this.productsList = resprod);
+      }
+      if (value === 'all') {
+        this.ProductosService.getProducts()
+      .subscribe((resprod: any) => this.productsList = resprod);
+      }
+      else {
+        this.ProductosService.getProducts()
+      .subscribe((resprod: any) => this.productsList = resprod); 
+      }
+    }
 }

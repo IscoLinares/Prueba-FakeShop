@@ -1,3 +1,12 @@
+.toolbar {
+  background-color: #00120B;
+  color: #D8E4FF;
+  .burger-btn {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
 .spacer-little {
     width: 2vw;
 }
@@ -11,10 +20,19 @@
     cursor: pointer;
   }
 
+  .container-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding: 10px;
+    background-color: #2B4F4B;
+  }
+
   .example-card {
+    align-items: center;
     max-width: 400px;
     margin: 10px;
-    background-color: white;
+    color: #000C29;
   }
 
   .mat-card-xl-image {
